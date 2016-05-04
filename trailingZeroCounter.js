@@ -78,4 +78,27 @@ var trailingZeroCounterV1 = function(number) {
 }
 
 
+//////////////////////////////////////////////////////////////
+
+// second linear time complexity solution:
+var trailingZeroCounterV2 = function(number, existingCount) {
+	// initialize the count
+	var count = existingCount || 0;
+
+	// if remainder after dividing number by 10 === 0
+	if (number % 10 === 0) {
+		var newNumber = number / 10;
+		// last digit was 0 so increase count
+		count++;
+		// recurse with new number
+		return trailingZeroCounterV2(newNumber, count);
+	} else {
+		return count;
+	}
+}
+
+
+
+
+
 
