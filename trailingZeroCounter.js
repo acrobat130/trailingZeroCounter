@@ -55,6 +55,9 @@ var trailingZeroCounter = function(number, existingCount) {
 }
 
 //////////////////////////////////////////////////////////////
+//TODO: redo above implementation without turning number into a string
+
+//////////////////////////////////////////////////////////////
 
 
 // linear time complexity solution:
